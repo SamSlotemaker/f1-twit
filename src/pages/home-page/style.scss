@@ -1,0 +1,51 @@
+.chirps_container {
+  grid-column: 3 / 7;
+  position: relative;
+
+  &_new-chirp {
+    background-color: white;
+    padding: 2rem 4rem 0rem 4rem;
+    border-radius: 2.2rem;
+    box-shadow: 14px 13px 43px 9px rgba(186, 178, 178, 0.25);
+
+    textarea {
+      background-color: #fcf3d6;
+      border: none;
+      resize: none;
+      border-radius: 1.3rem;
+      padding: 1rem;
+      color: black;
+      width: 100%;
+      font-size: 1.6rem;
+    }
+
+    &_submit-button {
+      color: white;
+      background-color: #f0c231;
+      display: block;
+      font-weight: 700;
+      border: none;
+      margin-left: auto;
+      font-size: 2rem;
+      padding: 1rem 2rem;
+      border-radius: 1.3rem;
+      transform: translate(20%, -50%);
+      cursor: pointer;
+    }
+  }
+}
+
+.chirps_overflow-glow {
+  background: linear-gradient(
+    180deg,
+    rgba(247, 247, 247, 0) 50.42%,
+    #f7f7f7 89.08%
+  );
+  position: sticky;
+  grid-column: 3 / 7;
+  bottom: 0;
+  transform: translateX(-10%);
+  display: block;
+  height: 4rem;
+  width: 120%;
+}

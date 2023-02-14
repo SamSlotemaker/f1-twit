@@ -1,0 +1,44 @@
+.chirp {
+  font-size: 1.8rem;
+  background-color: white;
+  border-radius: 1.3rem;
+  margin-top: 3rem;
+  box-shadow: 14px 13px 43px 9px rgba(186, 178, 178, 0.25);
+  position: relative;
+  color: black;
+  padding: 3rem 5rem 3rem 8rem;
+
+  h1 {
+    font-size: inherit;
+    color: inherit;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+
+  &_text {
+    font-size: inherit;
+    color: inherit;
+  }
+
+  &_profile-picture {
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-20%, -20%);
+  }
+
+  &_like-button {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(50%, -25%);
+    cursor: pointer;
+
+    img {
+      width: 3rem;
+    }
+  }
+}
