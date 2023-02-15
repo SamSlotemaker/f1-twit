@@ -1,4 +1,4 @@
-.chirp {
+.chirp-loading {
   font-size: 1.8rem;
   background-color: white;
   border-radius: 1.3rem;
@@ -8,19 +8,26 @@
   color: black;
   padding: 3rem 5rem 3rem 8rem;
 
-  h1 {
-    font-size: inherit;
-    color: inherit;
+  &_heading {
+    height: 1.8rem;
+    background-color: #fcf3d6;
+    width: 15rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
+    border-radius: 1.3rem;
   }
 
   &_text {
-    font-size: inherit;
-    color: inherit;
+    width: 80%;
+    background-color: #fcf3d6;
+    height: 8rem;
+    border-radius: 1.3rem;
   }
 
   &_profile-picture {
+    width: 7rem;
+    height: 7rem;
+    background-color: #fcf3d6;
     border-radius: 50%;
     position: absolute;
     top: 0;
@@ -40,27 +47,5 @@
     img {
       width: 3rem;
     }
-  }
-
-  .extra-info {
-    display: none;
-  }
-}
-
-//when clicked on
-.middle-container * {
-  transition: filter 0.2s;
-}
-
-.chirp-open .middle-container *:not(.opened-chirp, .opened-chirp *) {
-  filter: blur(0.75rem);
-  pointer-events: none;
-}
-.opened-chirp {
-  z-index: 1000;
-  box-shadow: 14px 13px 43px 9px rgb(186 178 178);
-
-  .extra-info {
-    display: block;
   }
 }

@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./style.scss";
-import { Chirp, Icon, MiddleContainer } from "../../components";
+import { Chirp, ChirpLoading, MiddleContainer } from "../../components";
 import Page from "../page-wrapper";
-import profileImage from "../../assets/images/profile.png";
 
 const HomePage = () => {
   const newChirpPlaceholder = "What are your thoughts about the Ford deal?";
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
+  }, []);
+
   return (
     <Page>
       <>
@@ -21,12 +29,16 @@ const HomePage = () => {
             </button>
           </form>
 
+          {isLoading &&
+            [...new Array(5)].map((k, i) => <ChirpLoading key={i} />)}
+          {!isLoading && [...new Array(5)].map((k, i) => <Chirp key={i} />)}
+
+          {/* <Chirp />
           <Chirp />
           <Chirp />
           <Chirp />
           <Chirp />
-          <Chirp />
-          <Chirp />
+          <Chirp /> */}
 
           <div className="chirps_overflow-glow"></div>
         </MiddleContainer>
