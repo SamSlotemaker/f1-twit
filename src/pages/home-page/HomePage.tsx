@@ -24,6 +24,7 @@ const HomePage = () => {
       setIsLoading(false);
     } catch (e) {
       console.log(e);
+      setIsLoading(false);
       setError(true);
     }
   };
@@ -50,9 +51,7 @@ const HomePage = () => {
           {isLoading &&
             [...new Array(5)].map((k, i) => <ChirpLoading key={i} />)}
 
-          {!isLoading && !error && chirpsData && (
-            <ChirpList chirps={chirpsData} />
-          )}
+          {!error && chirpsData && <ChirpList chirps={chirpsData} />}
 
           {!error && <div className="chirps_overflow-glow"></div>}
 

@@ -7,9 +7,6 @@ interface iProps {
 }
 
 const ChirpList: React.FC<iProps> = ({ chirps }) => {
-  useEffect(() => {
-    console.log(chirps);
-  }, []);
   return (
     <section className="chip-list">
       {chirps.map((chirp) => (
