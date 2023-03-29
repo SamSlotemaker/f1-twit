@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { endpoints } from "../../constants/eindpoints";
 import "./style.scss";
 import {
   ChirpLoading,
@@ -10,7 +11,6 @@ import Page from "../page-wrapper";
 
 const HomePage = () => {
   const newChirpPlaceholder = "What are your thoughts about the Ford deal?";
-  const ENDPOINT = "http://localhost:3500";
 
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -18,11 +18,12 @@ const HomePage = () => {
 
   const getData = async () => {
     try {
-      const response = await fetch(`${ENDPOINT}/api/tweets`);
+      const response = await fetch(endpoints.tweets);
       const dataJSON = await response.json();
       setChirpsData(dataJSON);
       setIsLoading(false);
     } catch (e) {
+      console.log(e);
       setError(true);
     }
   };
@@ -57,7 +58,7 @@ const HomePage = () => {
 
           {error && (
             <>
-              <ErrorTryAgain />
+              <ErrorTryAgain tryAgainFunction={getData} />
             </>
           )}
         </MiddleContainer>
