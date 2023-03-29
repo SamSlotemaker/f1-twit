@@ -1,14 +1,16 @@
-WIP
+# F1-Twit client (WIP)
 
-f1-twit client - React, TypeScript, SCSS
+![Imgur](https://imgur.com/6PEmYfW.png)
 
-General idea:
+### General idea
+
+React - Typescript - SCSS
 Twitter clone where users can express their thoughts about Formula 1. Data will be stored with mongoDB at the backend.
 
 ## Checklist client
 
-[X] homepage
-[X] react routes
-[X] loading state
-[X] responsive menu
-[] fetch from backend
+- [x] homepage
+- [x] react routes
+- [x] loading state
+- [x] responsive menu
+- [ ] fetch from backend
