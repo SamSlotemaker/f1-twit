@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./style.scss";
-import { Chirp, ChirpLoading, MiddleContainer } from "../../components";
+import {
+  Chirp,
+  ChirpLoading,
+  MiddleContainer,
+  ErrorTryAgain,
+} from "../../components";
 import Page from "../page-wrapper";
 
 const HomePage = () => {
@@ -48,16 +53,18 @@ const HomePage = () => {
 
           {isLoading &&
             [...new Array(5)].map((k, i) => <ChirpLoading key={i} />)}
-          {!isLoading && [...new Array(5)].map((k, i) => <Chirp key={i} />)}
 
-          {/* <Chirp />
-          <Chirp />
-          <Chirp />
-          <Chirp />
-          <Chirp />
-          <Chirp /> */}
+          {!isLoading &&
+            !error &&
+            [...new Array(5)].map((k, i) => <Chirp key={i} />)}
 
-          <div className="chirps_overflow-glow"></div>
+          {!error && <div className="chirps_overflow-glow"></div>}
+
+          {error && (
+            <>
+              <ErrorTryAgain />
+            </>
+          )}
         </MiddleContainer>
       </>
     </Page>

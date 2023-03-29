@@ -1,0 +1,28 @@
+.error-message {
+  background-color: #ff3d3d;
+  border-radius: 1.3rem;
+  margin-top: 3rem;
+  color: white;
+  padding: 2rem;
+}
+
+.error-message_text {
+  font-size: 2rem;
+  color: inherit;
+}
+
+.error-message_heading {
+  color: inherit;
+  font-size: 3rem;
+}
+
+.error-message_button {
+  color: inherit;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5em 1em;
+  border-radius: 0.8rem;
+  margin-top: 2rem;
+  background-color: orange;
+  cursor: pointer;
+}
