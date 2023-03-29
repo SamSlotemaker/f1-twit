@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import "./style.scss";
 
-interface iProps {}
-
-const ErrorTryAgain: React.FC<iProps> = () => {
+const ErrorTryAgain: React.FC = () => {
   return (
     <section className="error-message">
       <h2 className="error-message_heading">Error...</h2>

@@ -3,7 +3,9 @@ import "./style.scss";
 import profileImage from "../../assets/images/profile.png";
 import { Icon } from "../../components";
 
-interface iProps {}
+interface iProps {
+  data: { id: number; username: string; text: string };
+}
 
 const Chirp: React.FC<iProps> = () => {
   const chirpRef = useRef<HTMLElement>(null);

@@ -8,7 +8,7 @@ const FavoritesPage = () => {
     <Page>
       <MiddleContainer>
         <h1 className="favorites_page_heading">Favorites</h1>
-        <Chirp />
+        {/* <Chirp /> */}
       </MiddleContainer>
     </Page>
   );

@@ -52,10 +52,13 @@
   transition: filter 0.2s;
 }
 
-.chirp-open .middle-container *:not(.opened-chirp, .opened-chirp *) {
+.chirp-open
+  .middle-container
+  *:not(.opened-chirp, .opened-chirp *, .chip-list) {
   filter: blur(0.75rem);
   pointer-events: none;
 }
+
 .opened-chirp {
   z-index: 1000;
   box-shadow: 14px 13px 43px 9px rgb(186 178 178);
